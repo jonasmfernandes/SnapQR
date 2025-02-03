@@ -18,6 +18,8 @@ O usuário insere uma URL no campo de texto. A aplicação valida se o texto é 
 
 A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Generate".
 
+Teste você mesmo! <a href="https://snapqr-wheat.vercel.app">SnapQR</a>
+
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
@@ -31,7 +33,7 @@ A aplicação pode ser testada diretamente no navegador, onde o usuário pode di
   ```
 2. Acesse a pasta do projeto:
   ```bash
-   cd imeiCheck
+   cd qrcode-generator
   ```
 3. Rode a aplicação no seu navegador:
 ```bash

@@ -1,50 +1,46 @@
-# React + TypeScript + Vite
+# 💻 Gerador de QRCode
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Precisa de um QRCode para a sua empresa? Esta aplicação permite ao usuário gerar um QR Code a partir de qualquer URL válida. Ao inserir o link desejado, o QR Code é gerado dinamicamente e pode ser baixado em formato de imagem PNG. A interface é simples e intuitiva, proporcionando uma experiência rápida e eficiente.
 
-Currently, two official plugins are available:
+## Como funciona?
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O usuário insere uma URL no campo de texto. A aplicação valida se o texto é um link válido (com protocolo HTTP ou HTTPS). Se for válido, o QR Code correspondente à URL é gerado. O botão "Generate" fica habilitado somente se um link válido for inserido, e o QR Code pode ser baixado como uma imagem PNG.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Lucide Icons**
+- **qrcode.react**
+- **Vite**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Aplicação funcionando
 
-- Configure the top-level `parserOptions` property like this:
+A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Generate".
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Como Rodar o Projeto
+
+### Pré-requisitos
+- **NodeJS** (v16 ou superior)
+- **npm, yarn ou pnpm** 
+
+### Como executar
+1. Clone este repositório:
+  ```bash
+   git clone https://github.com/jonasmfernandes/qrcode-generator.git
+  ```
+2. Acesse a pasta do projeto:
+  ```bash
+   cd imeiCheck
+  ```
+3. Rode a aplicação no seu navegador:
+```bash
+  npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Autor 
+Desenvolvido por: Jonas Monteiro Fernandes
+- E-mail: mfernandes.jonas@gmail.com
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## Licença
+Este projeto está licenciado sob a MIT License.

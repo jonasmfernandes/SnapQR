@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useRef } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
+import { QrCode } from 'lucide-react';
 
 const isValidURL = (text: string) => {
   try {
@@ -13,6 +14,9 @@ const isValidURL = (text: string) => {
 
 function App() {
   const [text, setText] = useState('');
+  const [showQRCode, setShowQRCode] = useState(false);
+  const [showText, setShowText] = useState(true);
+  const [showGenerateButton, setShowGenerateButton] = useState(true);  
   const qrRef = useRef<HTMLDivElement | null>(null);
 
   const downloadQRCode = () => {
@@ -28,31 +32,92 @@ function App() {
     }
   };
 
+  const handleGenerate = () => {
+    setShowQRCode(true);
+    setShowText(false);
+    setShowGenerateButton(false); 
+  };
+
+  const handleGenerateOther = () => {
+    setShowQRCode(false);
+    setText('');
+    setShowText(true);
+    setShowGenerateButton(true);
+  };
+
   return (
-    <div className="bg-[#f8f8f8] h-screen flex justify-center items-center">
-      <div className="bg-[#1f1f1f] inline-flex items-center flex-col p-4 gap-3 rounded-md">
-        <input
-          type="text"
-          className="rounded-md bg-white p-2"
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          placeholder="Digite uma URL"
-        />
-        {isValidURL(text) && (
-          <div ref={qrRef} className="mt-4">
-            <QRCodeCanvas value={text} size={200} />
+    <>
+      <div
+        className="h-screen flex justify-center items-center flex-col gap-20"
+        style={{
+          background: "url('../public/wave.svg')",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="flex flex-col gap-3 align-center items-center mb-5">
+          <div className="flex items-center align-center text-[#684557]">
+            <QrCode size={48} />
+            <h1 className="text-5xl font-bold text-[#684557]">SnapQR</h1>
           </div>
-        )}
-        <button
-          onClick={downloadQRCode}
-          disabled={!isValidURL(text)}
-          className={`flex items-center gap-1 py-2 px-5 rounded-md mt-2 
-          ${isValidURL(text) ? 'bg-[#404040] text-white hover:bg-[#505050] cursor-pointer' : 'bg-gray-500 text-gray-300 cursor-not-allowed'}`}
-        >
-          Generate
-        </button>
+
+          {showText && (
+            <p className="text-[#000000a5] w-[50%] text-center">
+              🚀 Seu negócio ainda não tem um QR Code? Você está perdendo clientes! Com um simples
+              escaneamento, eles acessam seu cardápio, pagamento, redes sociais ou qualquer
+              informação importante. Profissionalize sua marca e facilite a vida dos seus clientes
+              agora mesmo! 🔥📲
+            </p>
+          )}
+        </div>
+
+        <div className="inline-flex items-center flex-col p-4 gap-3 rounded-md">
+          <input
+            type="text"
+            className="rounded-md bg-white p-2 border border-[#d6d2b5] w-[20vw]"
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Digite o link aqui."
+          />
+
+          {showQRCode && isValidURL(text) && (
+            <div ref={qrRef} className="mt-4">
+              <QRCodeCanvas value={text} size={200} />
+            </div>
+          )}
+
+          {showGenerateButton && (
+            <button
+              onClick={handleGenerate}
+              disabled={!isValidURL(text)}
+              className={`flex items-center gap-1 py-2 px-5 rounded-md mt-2 duration-200
+              ${isValidURL(text) ? 'bg-[#684557] text-white hover:bg-[#513443] cursor-pointer' : 'bg-[#b3b3a1] text-gray-300 cursor-not-allowed'}`}
+            >
+              Generate
+            </button>
+          )}
+
+          {showQRCode && isValidURL(text) && (
+            <button
+              onClick={downloadQRCode}
+              className="flex items-center gap-1 py-2 px-5 rounded-md mt-2 cursor-pointer bg-[#684557] text-white hover:bg-[#513443]"
+            >
+              Download QR Code
+            </button>
+          )}
+
+          {showQRCode && (
+            <button
+              onClick={handleGenerateOther}
+              className="flex items-center gap-1 py-2 px-5 rounded-md mt-2 cursor-pointer bg-[#FFFFF2] text-[#684557] hover:bg-[#e2e2d1]"
+            >
+              Generate Other
+            </button>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

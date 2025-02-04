@@ -48,7 +48,7 @@ function App() {
   return (
     <>
       <div
-        className="h-screen flex justify-center items-center flex-col gap-20"
+        className="sm:gap-2 px-5 xl:px-0 h-screen flex justify-center items-center flex-col xl:gap-20"
         style={{
           background: "url('../public/wave.svg')",
           backgroundRepeat: "no-repeat",
@@ -63,7 +63,7 @@ function App() {
           </div>
 
           {showText && (
-            <p className="text-[#000000a5] w-[50%] text-center">
+            <p className="w-[100%] sm:w-[80%] text-[#000000a5] xl:w-[50%] text-center">
               🚀 Seu negócio ainda não tem um QR Code? Você está perdendo clientes! Com um simples
               escaneamento, eles acessam seu cardápio, pagamento, redes sociais ou qualquer
               informação importante. Profissionalize sua marca e facilite a vida dos seus clientes
@@ -75,10 +75,10 @@ function App() {
         <div className="inline-flex items-center flex-col p-4 gap-3 rounded-md">
           <input
             type="text"
-            className="rounded-md bg-white p-2 border border-[#d6d2b5] w-[20vw]"
+            className="rounded-md bg-white p-2 border border-[#d6d2b5] xl:w-[20vw]  "
             value={text}
             onChange={(e) => setText(e.target.value)}
-            placeholder="Digite o link aqui."
+            placeholder="Digite ou cole o link aqui."
           />
 
           {showQRCode && isValidURL(text) && (

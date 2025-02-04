@@ -50,7 +50,7 @@ function App() {
       <div
         className="sm:gap-2 px-5 xl:px-0 h-screen flex justify-center items-center flex-col xl:gap-20"
         style={{
-          background: "url('/public/wave.svg')",
+          background: "url('../public/wave.svg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",

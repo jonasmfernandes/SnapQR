@@ -17,6 +17,7 @@ function App() {
   const [showQRCode, setShowQRCode] = useState(false);
   const [showText, setShowText] = useState(true);
   const [showGenerateButton, setShowGenerateButton] = useState(true);  
+  // const [urlValid, setUrlValid] = useState<boolean | null>(null);
   const qrRef = useRef<HTMLDivElement | null>(null);
 
   const downloadQRCode = () => {
@@ -43,7 +44,45 @@ function App() {
     setText('');
     setShowText(true);
     setShowGenerateButton(true);
+    // setUrlValid(null);
   };
+
+  // const checkURL = async (url: string) => {
+  //   setShowGenerateButton(false);
+
+  
+  //   try {
+  //     const response = await fetch('http://localhost:3000/verify-url', {
+  //       method: 'POST',
+  //       headers: {
+  //         'Content-Type': 'application/json',
+  //       },
+  //       body: JSON.stringify({ url })
+
+  //     });
+
+  //     const data = await response.json();
+  //     setUrlValid(data.valid);
+  //     setShowGenerateButton(true);
+  //   } catch (error) {
+  //     setUrlValid(false);
+  //     setShowGenerateButton(true);
+  //     console.error('Error checking URL:', error);
+  //   }
+  // };
+
+  // const handleTextChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  //   const newText = e.target.value;
+  //   setText(newText);
+
+  //   if (isValidURL(newText)) {
+  //     setShowGenerateButton(true);
+  //     checkURL(newText);
+  //   } else {
+  //     setUrlValid(null);
+  //     setShowGenerateButton(false);
+  //   }
+  // };
 
   return (
     <>
@@ -81,11 +120,26 @@ function App() {
             placeholder="Digite ou cole o link aqui."
           />
 
+          {/* {urlValid === false && (
+            <p className="text-red-500">URL inválida! Por favor, verifique o link.</p>
+          )} */}
+
           {showQRCode && isValidURL(text) && (
             <div ref={qrRef} className="mt-4">
               <QRCodeCanvas value={text} size={200} />
             </div>
           )}
+
+          {/* {showGenerateButton && (
+            <button
+            onClick={handleGenerate}
+            disabled={urlValid === false || !isValidURL(text)} 
+            className={`flex items-center gap-1 py-2 px-5 rounded-md mt-2 duration-200
+              ${urlValid === false || !isValidURL(text) ? 'bg-[#b3b3a1] text-gray-300 cursor-not-allowed' : 'bg-[#684557] text-white hover:bg-[#513443] cursor-pointer'}`}
+          >
+            Generate
+          </button>
+          )} */}
 
           {showGenerateButton && (
             <button
@@ -97,6 +151,7 @@ function App() {
               Generate
             </button>
           )}
+
 
           {showQRCode && isValidURL(text) && (
             <button

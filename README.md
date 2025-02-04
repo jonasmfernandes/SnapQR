@@ -1,6 +1,6 @@
-# 💻 Gerador de QRCode
+# 💻 SnapQR - Gerador de QRCode
 
-Precisa de um QRCode para a sua empresa? Esta aplicação permite ao usuário gerar um QR Code a partir de qualquer URL válida. Ao inserir o link desejado, o QR Code é gerado dinamicamente e pode ser baixado em formato de imagem PNG. A interface é simples e intuitiva, proporcionando uma experiência rápida e eficiente.
+Precisa de um QRCode para a sua empresa? Com o SnapQR você gera um QR Code a partir de qualquer URL válida. Ao inserir o link desejado, o QR Code é gerado dinamicamente e pode ser baixado em formato de imagem PNG. A interface é simples e intuitiva, proporcionando uma experiência rápida e eficiente.
 
 ## Como funciona?
 
@@ -16,7 +16,7 @@ O usuário insere uma URL no campo de texto. A aplicação valida se o texto é 
 
 ## Aplicação funcionando
 
-A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Generate".
+A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Download".
 
 Teste você mesmo! <a href="https://snapqr-wheat.vercel.app">SnapQR</a>
 

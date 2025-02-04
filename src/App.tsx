@@ -50,7 +50,7 @@ function App() {
       <div
         className="sm:gap-2 px-5 xl:px-0 h-screen flex justify-center items-center flex-col xl:gap-20"
         style={{
-          background: "url('../public/wave.svg')",
+          background: "url('/public/wave.svg')",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundSize: "cover",
@@ -110,7 +110,7 @@ function App() {
           {showQRCode && (
             <button
               onClick={handleGenerateOther}
-              className="flex items-center gap-1 py-2 px-5 rounded-md mt-2 cursor-pointer bg-[#FFFFF2] text-[#684557] hover:bg-[#e2e2d1]"
+              className="flex items-center gap-1 py-2 px-5 rounded-md mt-2 cursor-pointer border border-[#684557] bg-[#FFFFF2] text-[#684557] hover:bg-[#e2e2d1]"
             >
               Generate Other
             </button>

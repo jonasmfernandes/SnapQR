@@ -97,7 +97,10 @@ function App() {
       >
         <div className="flex flex-col gap-3 align-center items-center mb-5">
           <div className="flex items-center align-center text-[#684557]">
+            <div className="mt-[7px]">
             <QrCode size={48} />
+
+            </div>
             <h1 className="text-5xl font-bold text-[#684557]">SnapQR</h1>
           </div>
 

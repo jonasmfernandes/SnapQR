@@ -4,7 +4,7 @@ Precisa de um QRCode para a sua empresa? Com o SnapQR você gera um QR Code a pa
 
 ## Como funciona?
 
-O usuário insere uma URL no campo de texto. A aplicação valida se o texto é um link válido (com protocolo HTTP ou HTTPS). Se for válido, o QR Code correspondente à URL é gerado. O botão "Generate" fica habilitado somente se um link válido for inserido, e o QR Code pode ser baixado como uma imagem PNG
+O usuário insere uma URL no campo de texto. A aplicação valida se o texto é um link válido (com protocolo HTTP ou HTTPS). Se for válido, o QR Code correspondente à URL é gerado. O botão "Generate" fica habilitado somente se um link válido for inserido, e o QR Code pode ser baixado como uma imagem PNG.
 
 ## Tecnologias Utilizadas
 - **React (qrcode.react)**

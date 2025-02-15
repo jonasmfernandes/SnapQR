@@ -2,6 +2,7 @@ import './App.css';
 import { useState, useRef } from 'react';
 import { QRCodeCanvas } from 'qrcode.react';
 import { QrCode } from 'lucide-react';
+import Header from './components/Header';
 
 const isValidURL = (text: string) => {
   try {
@@ -95,6 +96,7 @@ function App() {
           backgroundSize: "cover",
         }}
       >
+        <Header/>
         <div className="flex flex-col gap-3 align-center items-center mb-5">
           <div className="flex items-center align-center text-[#684557]">
             <div className="mt-[7px]">

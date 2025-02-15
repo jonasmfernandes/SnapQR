@@ -16,7 +16,7 @@ O usuário insere uma URL no campo de texto. A aplicação valida se o texto é 
 
 ## Aplicação funcionando
 
-A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Download".
+A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Download"
 
 <img src="./src/assets/print_hero_2.png">
 

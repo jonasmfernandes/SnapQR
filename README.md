@@ -8,7 +8,8 @@ O usuário insere uma URL no campo de texto. A aplicação valida se o texto é 
 
 ## Tecnologias 
 - `React`
-- `NodeJS Express`
+- `NodeJS`
+- `Express`
 - `TypeScript`
 - `Tailwind CSS`
 - `Lucide Icons`

@@ -6,17 +6,15 @@ Precisa de um QRCode para a sua empresa? Com o SnapQR você gera um QR Code a pa
 
 O usuário insere uma URL no campo de texto. A aplicação valida se o texto é um link válido (com protocolo HTTP ou HTTPS). Se for válido, o QR Code correspondente à URL é gerado. O botão "Generate" fica habilitado somente se um link válido for inserido, e o QR Code pode ser baixado como uma imagem PNG.
 
-## Tecnologias Utilizadas
-- **React (qrcode.react)**
-- **NodeJS Express**
-- **TypeScript**
-- **Tailwind CSS**
-- **Lucide Icons**
-- **Vite**
+## Tecnologias 
+- `React (qrcode.react)`
+- `NodeJS Express`
+- `TypeScript`
+- `Tailwind CSS`
+- `Lucide Icons`
+- `Vite`
 
 ## Aplicação funcionando
-
-A aplicação pode ser testada diretamente no navegador, onde o usuário pode digitar uma URL e visualizar o QR Code gerado. Após isso, é possível baixar a imagem do QR Code clicando no botão "Download"
 
 <img src="./src/assets/print_hero_2.png">
 
@@ -25,22 +23,14 @@ Teste você mesmo! <a href="https://snapqr-wheat.vercel.app">SnapQR</a>
 ## Como Rodar o Projeto
 
 ### Pré-requisitos
-- **NodeJS** (v16 ou superior)
-- **npm, yarn ou pnpm** 
+- `NodeJS`
+- `npm, yarn ou pnpm` 
 
-### Como executar
-1. Clone este repositório:
-  ```bash
-   git clone https://github.com/jonasmfernandes/qrcode-generator.git
-  ```
-2. Acesse a pasta do projeto:
-  ```bash
-   cd qrcode-generator
-  ```
-3. Rode a aplicação no seu navegador:
-```bash
-  npm run dev
-```
+### Executando
+1. Clone o repositório
+2. Instale as dependências: `npm install`
+3. Run development server: `npm run dev`
+4. Open http://localhost:5173 in your browser
 
 ## Autor 
 Desenvolvido por: Jonas Monteiro Fernandes

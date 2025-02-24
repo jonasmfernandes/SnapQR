@@ -12,7 +12,7 @@ function App() {
   const [showGenerateButton, setShowGenerateButton] = useState(true);
 
   const handleGenerate = () => {
-    setShowQRCode(true);
+    setShowQRCode(true); 
     setShowText(false);
     setShowGenerateButton(false);
   };
@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div
-      className="sm:gap-2 px-5 xl:px-0 h-screen flex justify-center items-center flex-col xl:gap-20"
+      className="sm:gap-2 px-5 xl:px-0 h-screen flex justify-center items-center flex-col xl:gap-0"
       style={{
         background: "url('/wave.svg')",
         backgroundRepeat: "no-repeat",

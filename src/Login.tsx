@@ -4,19 +4,19 @@ import { QrCode } from "lucide-react";
 const Login = () => {
   return (
     <>
-      <div className=" bg-white flex">
-        <section className="h-screen w-[50%] flex justify-center items-center">
+      <div className=" bg-white md:flex">
+        <section className="h-screen  md:w-[50%] flex justify-center items-center px-8">
           <main className="flex flex-col gap-2 ">
-            <div className="flex items-center justify-center mr-5">
+            <div className="flex items-center justify-center">
             <QrCode 
             className="text-[#684557] "
             size={64} />
             </div>
-            <h1 className="font-semibold text-3xl pt-4">Get Started</h1>
-            <h4 className="text-black/50">
-              Welcome to SnapQR - Let's create your account
+            <h1 className="text-center md:text-left font-semibold text-2xl md:text-3xl pt-4">Vamos começar</h1>
+            <h4 className="text-black/50 text-center md:text-left">
+              Bem-vindo ao SnapQR - Vamos criar sua conta!
             </h4>
-            <div className="bg-[#68455775] h-0.5 rounded-md w-96 my-5"></div>
+            <div className="bg-[#68455775] h-0.5 rounded-md  my-5"></div>
 
             <h2>Email</h2>
             <input
@@ -34,12 +34,12 @@ const Login = () => {
 
             <button 
             className="flex items-center justify-center gap-1 py-2 px-5 rounded-md mt-2 duration-200 text-sm bg-gradient-to-r from-[#2e1b25] to-[#684557]  text-white cursor-pointer hover:brightness-110"
-            >Sign Up</button>
+            >Criar conta</button>
             <p className="text-black/50 text-center">Já tem uma conta? <a href="#" className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300">Entre aqui</a></p>
           </main>
 
         </section>
-        <section className="bg-[#684557] h-screen w-[50%] rounded-l-4xl"></section>
+        <section className="hidden md:flex bg-[#684557] h-screen w-[50%] rounded-l-4xl"></section>
       </div>
     </>
   );

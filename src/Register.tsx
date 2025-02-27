@@ -1,7 +1,7 @@
 import "./App.css";
 import { QrCode } from "lucide-react";
 
-const Login = () => {
+const Register = () => {
   return (
     <>
       <div className=" bg-white md:flex">
@@ -18,18 +18,26 @@ const Login = () => {
             </h4>
             <div className="bg-[#68455775] h-0.5 rounded-md  my-5"></div>
 
-            <h2>Email</h2>
+            <label htmlFor="e-mail" className="text-md">E-mail</label>
             <input
+              id="e-mail"
               type="email"
               className="rounded-md bg-transparent p-2 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
-              placeholder="Digite aqui seu e-mail"
+              placeholder="seuemail@gmail.com"
             />
 
-            <h2>Senha</h2>
+            <label htmlFor="password" className="text-md">Senha</label>
             <input
+              id="password"
+              type="password"
+              className="rounded-md bg-transparent p-2 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
+            />
+
+            <label htmlFor="confirm-password" className="text-md">Confirme sua senha</label>
+            <input
+              id="confirm-password"
               type="password"
               className="rounded-md bg-transparent p-2 border mb-4 border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
-              placeholder="Digite aqui sua senha"
             />
 
             <button 
@@ -45,4 +53,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

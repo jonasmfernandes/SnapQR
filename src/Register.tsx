@@ -1,7 +1,9 @@
 import "./App.css";
 import { QrCode } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Register = () => {
+
   return (
     <>
       <div className=" bg-white md:flex">
@@ -51,12 +53,7 @@ const Register = () => {
             </button>
             <p className="text-black/50 text-center">
               Já tem uma conta?{" "}
-              <a
-                href="#"
-                className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300"
-              >
-                Entre aqui
-              </a>
+              <Link to="/login" className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300">Entre aqui</Link>
             </p>
           </main>
         </section>

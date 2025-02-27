@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router'
 import './index.css'
 import App from './App.tsx'
 import Register from './Register.tsx'
+import Login from './Login.tsx'
 
 createRoot(document.getElementById('root')!).render(
 
@@ -10,6 +11,7 @@ createRoot(document.getElementById('root')!).render(
   <Routes>
     <Route path="/dashboard" element={<App />}/>
     <Route path="/register" element={<Register />}/>
+    <Route path="/login" element={<Login />} />
   </Routes>
   </BrowserRouter>
 

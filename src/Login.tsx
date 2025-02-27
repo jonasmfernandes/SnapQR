@@ -1,7 +1,7 @@
 import "./App.css";
 import { QrCode } from "lucide-react";
 
-const Register = () => {
+const Login = () => {
   return (
     <>
       <div className=" bg-white md:flex">
@@ -36,16 +36,6 @@ const Register = () => {
               type="password"
               className="rounded-md bg-transparent p-2 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
             />
-
-            <label htmlFor="confirm-password" className="text-md">
-              Confirme sua senha
-            </label>
-            <input
-              id="confirm-password"
-              type="password"
-              className="rounded-md bg-transparent p-2 border mb-4 border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
-            />
-
             <button className="flex items-center justify-center gap-1 py-2 px-5 rounded-md mt-2 duration-200 text-sm bg-gradient-to-r from-[#2e1b25] to-[#684557]  text-white cursor-pointer hover:brightness-110">
               Criar conta
             </button>
@@ -66,4 +56,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default Login;

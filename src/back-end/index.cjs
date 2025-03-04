@@ -1,5 +1,5 @@
+const z = require("zod");
 require("dotenv").config();
-
 const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
@@ -19,12 +19,20 @@ app.listen(PORT, () =>
   console.log(`server is working on console.log. port:${PORT}`)
 );
 
-app.post("/register", async (req, res) => {
-  const { email, password, confirmPassword } = req.body;
+const registerSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(6),
+  confirmPassword: z.string().min(6),
+});
 
-  if (!email || !password || !confirmPassword) {
-    return res.status(400).json({ error: "Todos os campos são obrigatórios." });
+app.post("/register", async (req, res) => {
+  const result = registerSchema.safeParse(req.body);
+
+  if (!result.success) {
+    return res.status(400).json({ error: result.error.format() });
   }
+
+  const { email, password, confirmPassword } = result.data;
 
   if (password !== confirmPassword) {
     return res.status(400).json({ error: "As senhas não coincidem." });
@@ -55,6 +63,7 @@ app.post("/register", async (req, res) => {
 
 app.post("/login", async (req, res) => {
   const { email, password } = req.body;
+
   const client = await MongoClient.connect("mongodb://localhost:27017");
   const db = client.db("snapqr");
   const users = db.collection("users");

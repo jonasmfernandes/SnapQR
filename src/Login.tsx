@@ -1,13 +1,13 @@
 import "./App.css";
 import { QrCode } from "lucide-react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
     <>
       <div className=" bg-white md:flex">
-        <section className="h-screen  md:w-[50%] flex justify-center items-center px-8">
-          <main className="flex flex-col gap-2 ">
+        <section className="h-screen md:w-[50%] flex justify-center items-center px-8">
+          <main className="flex flex-col gap-2">
             <div className="flex items-center justify-center">
               <QrCode className="text-[#684557] " size={64} />
             </div>
@@ -42,7 +42,12 @@ const Login = () => {
             </button>
             <p className="text-black/50 text-center">
               Não tem uma conta?{" "}
-              <Link to="/register" className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300">Registre aqui</Link>
+              <Link
+                to="/register"
+                className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300"
+              >
+                Registre aqui
+              </Link>
             </p>
           </main>
         </section>

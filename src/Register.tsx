@@ -108,6 +108,13 @@ const Register = () => {
                 Entre aqui
               </Link>
             </p>
+            <p className="text-black/50 text-center">
+            Teste sem conta. {" "}
+              <Link 
+              to="/dashboard"
+              className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300"
+              >Entre como convidado.</Link>
+            </p>
           </main>
         </section>
         <section className="hidden md:flex bg-[#684557] h-screen w-[50%] rounded-l-4xl"></section>

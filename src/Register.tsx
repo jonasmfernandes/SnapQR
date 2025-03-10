@@ -1,6 +1,6 @@
 import "./App.css";
 import { QrCode } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Register = () => {
@@ -8,6 +8,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const API_URL = import.meta.env.VITE_API_URL;
+  const navigate = useNavigate();
 
   console.log("API_URL:", API_URL);
   const handleRegister = async () => {
@@ -24,6 +25,7 @@ const Register = () => {
       console.log(data);
       if (response.ok) {
         alert("Cadastro criado com sucesso!");
+        navigate("/login");
       } else {
         if (data.error) {
           if (data.error.password && data.error.password._errors) {

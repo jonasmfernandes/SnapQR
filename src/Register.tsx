@@ -7,13 +7,11 @@ const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const API_URL = import.meta.env.VITE_API_URL;
   const navigate = useNavigate();
 
-  console.log("API_URL:", API_URL);
   const handleRegister = async () => {
     try {
-      const response = await fetch(`${API_URL}register`, {
+      const response = await fetch('/api/register', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -87,7 +87,7 @@ const Register = () => {
                 onClick={() => setShowPassword((prev) => !prev)}
                 className="absolute top-1/2 right-3 transform -translate-y-1/2 text-[#684557] hover:text-[#513443] transition"
               >
-                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
               </button>
             </div>
 
@@ -107,7 +107,7 @@ const Register = () => {
                 onClick={() => setShowConfirmPassword((prev) => !prev)}
                 className="absolute top-1/2 right-3 transform -translate-y-1/2 text-[#684557] hover:text-[#513443] transition"
               >
-                {showConfirmPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+                {showConfirmPassword ? <Eye size={20} /> : <EyeOff size={20} />}
               </button>
             </div>
 

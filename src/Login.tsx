@@ -1,9 +1,10 @@
 import "./App.css";
-import { QrCode } from "lucide-react";
+import { QrCode, EyeOff, Eye } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const API_URL = import.meta.env.VITE_API_URL;
@@ -40,10 +41,10 @@ const Login = () => {
             <div className="flex items-center justify-center">
               <QrCode className="text-[#684557] " size={64} />
             </div>
-            <h1 className="text-center md:text-left font-semibold text-2xl md:text-3xl pt-4">
+            <h1 className="text-center font-semibold text-2xl md:text-3xl pt-4">
               Vamos continuar
             </h1>
-            <h4 className="text-black/50 text-center md:text-left">
+            <h4 className="text-black/50 text-center">
               Bem-vindo de volta ao SnapQR - Vamos gerar QRCodes?
             </h4>
             <div className="bg-[#68455775] h-0.5 rounded-md  my-5"></div>
@@ -63,13 +64,24 @@ const Login = () => {
             <label htmlFor="password" className="text-md">
               Senha
             </label>
-            <input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="rounded-md bg-transparent p-2 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
-            />
+
+            <div className="relative">
+              <input
+                id="password"
+                type={showPassword ? "text" : "password"}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="w-full rounded-md bg-transparent p-2 pr-10 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
+                placeholder="******"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword((prev) => !prev)}
+                className="absolute top-1/2 right-3 transform -translate-y-1/2 text-[#684557] hover:text-[#513443] transition"
+              >
+                {showPassword ? <Eye size={20} /> : <EyeOff size={20} />}
+              </button>
+            </div>
             <button
               onClick={handleLogin}
               className="flex items-center justify-center gap-1 py-2 px-5 rounded-md mt-2 duration-200 text-sm bg-gradient-to-r from-[#2e1b25] to-[#684557]  text-white cursor-pointer hover:brightness-110"
@@ -87,7 +99,7 @@ const Login = () => {
             </p>
           </main>
         </section>
-        <section className="hidden md:flex bg-[#684557] h-screen w-[50%] rounded-l-4xl"></section>
+        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]"></section>
       </div>
     </>
   );

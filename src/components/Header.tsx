@@ -16,8 +16,8 @@ const Header = ({ showText }: HeaderProps) => {
       </div>
       {showText && (
         <p className="w-[100%] sm:w-[80%] text-[#000000a5] xl:w-[50%] text-center">
-          🚀 Seu negócio ainda não tem um QR Code? Você está perdendo clientes! 
-          Profissionalize sua marca e facilite a vida dos seus clientes agora mesmo! 🔥📲
+          Seu negócio ainda não tem um QR Code? Você está perdendo clientes! 
+          Profissionalize sua marca e facilite a vida dos seus clientes agora mesmo!
         </p>
       )}
     </div>

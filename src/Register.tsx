@@ -51,10 +51,10 @@ const Register = () => {
             <div className="flex items-center justify-center">
               <QrCode className="text-[#684557]" size={64} />
             </div>
-            <h1 className="text-center md:text-left font-semibold text-2xl md:text-3xl pt-4">
+            <h1 className="text-center font-semibold text-2xl md:text-3xl pt-4">
               Vamos começar
             </h1>
-            <h4 className="text-black/50 text-center md:text-left">
+            <h4 className="text-black/50 text-center">
               Bem-vindo ao SnapQR - Vamos criar sua conta!
             </h4>
             <div className="bg-[#68455775] h-0.5 rounded-md  my-5"></div>
@@ -81,6 +81,7 @@ const Register = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="w-full rounded-md bg-transparent p-2 pr-10 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
+                placeholder="******"
               />
               <button
                 type="button"
@@ -101,6 +102,7 @@ const Register = () => {
                 value={confirmPassword}
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 className="w-full rounded-md bg-transparent p-2 pr-10 border border-[#d6d2b5] focus:outline-none focus:border-[#684557] hover:border-[#684557] shadow-sm focus:shadow transition duration-100"
+                placeholder="******"
               />
               <button
                 type="button"
@@ -132,12 +134,12 @@ const Register = () => {
                 to="/dashboard"
                 className="text-[#181818] transition duration-100 hover:text-black hover:underline hover:transition hover:duration-300"
               >
-                Entre como convidado.
+                Entre como convidado
               </Link>
             </p>
           </main>
         </section>
-        <section className="hidden md:flex bg-[#684557] h-screen w-[50%] rounded-l-4xl"></section>
+        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]"></section>
       </div>
     </>
   );

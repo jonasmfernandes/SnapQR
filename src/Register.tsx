@@ -2,6 +2,7 @@ import "./App.css";
 import { QrCode, Eye, EyeOff } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Qrcode from './assets/QRCode.png'
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -139,7 +140,9 @@ const Register = () => {
             </p>
           </main>
         </section>
-        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]"></section>
+        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]">
+          <img className="w-[100%]" src={Qrcode} alt="" />
+        </section>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import "./App.css";
 import { QrCode, EyeOff, Eye } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import Qrcode from './assets/QRCode.png';
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -35,13 +36,13 @@ const Login = () => {
 
   return (
     <>
-      <div className=" bg-white md:flex">
-        <section className="h-screen md:w-[50%] flex justify-center items-center px-8">
+      <div className=" bg-white lg:flex">
+        <section className="h-screen lg:w-[50%] flex justify-center items-center px-8">
           <main className="flex flex-col gap-2">
             <div className="flex items-center justify-center">
               <QrCode className="text-[#684557] " size={64} />
             </div>
-            <h1 className="text-center font-semibold text-2xl md:text-3xl pt-4">
+            <h1 className="text-center font-semibold text-2xl lg:text-3xl pt-4">
               Vamos continuar
             </h1>
             <h4 className="text-black/50 text-center">
@@ -99,7 +100,9 @@ const Login = () => {
             </p>
           </main>
         </section>
-        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]"></section>
+        <section className="hidden lg:flex bg-[#684557] h-screen w-[50%]">
+          <img className="w-[100%]" src={Qrcode} alt="" />
+        </section>
       </div>
     </>
   );

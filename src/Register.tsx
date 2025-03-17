@@ -46,8 +46,8 @@ const Register = () => {
   };
   return (
     <>
-      <div className=" bg-white md:flex">
-        <section className="h-screen md:w-[50%] flex justify-center items-center px-8 md:px-0">
+      <div className=" bg-white lg:flex">
+        <section className="h-screen lg:w-[50%] flex justify-center items-center px-8 md:px-0">
           <main className="flex flex-col gap-2 md:w-[54%]">
             <div className="flex items-center justify-center">
               <QrCode className="text-[#684557]" size={64} />
@@ -140,7 +140,7 @@ const Register = () => {
             </p>
           </main>
         </section>
-        <section className="hidden md:flex bg-[#684557] h-screen w-[50%]">
+        <section className="hidden lg:flex bg-[#684557] h-screen w-[50%]">
           <img className="w-[100%]" src={Qrcode} alt="" />
         </section>
       </div>
